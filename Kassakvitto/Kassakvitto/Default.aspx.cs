@@ -16,7 +16,10 @@ namespace Kassakvitto
 
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
+            // Jobbar mot mina validatorer och endast om valid data körs det innanför if satsen.
+            if (IsValid) { 
             
+            }
         }
     }
 }

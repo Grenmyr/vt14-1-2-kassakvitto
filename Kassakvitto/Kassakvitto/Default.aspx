@@ -13,7 +13,7 @@
     <form id="form1" runat="server">
         <h1>Kassakvitto</h1>
         <div>
-            <asp:TextBox ID="TextBox" runat="server" ControlToValidate="TextBox"></asp:TextBox>
+            <asp:TextBox ID="TextBox" runat="server"></asp:TextBox>
             
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" CssClass="errorMessage" ErrorMessage="Du måste fylla i korrekt köpesumma" Display="Dynamic" ControlToValidate="TextBox"></asp:RequiredFieldValidator>
             <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Köpesumma måste vara ett positivt tal." ControlToValidate="TextBox" Display="Dynamic"></asp:CompareValidator>
