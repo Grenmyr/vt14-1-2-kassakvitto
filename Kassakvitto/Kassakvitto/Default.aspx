@@ -16,7 +16,7 @@
             <asp:TextBox ID="TextBox" runat="server"></asp:TextBox>
             
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" CssClass="errorMessage" ErrorMessage="Du måste fylla i korrekt köpesumma" Display="Dynamic" ControlToValidate="TextBox"></asp:RequiredFieldValidator>
-            <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Köpesumma måste vara ett positivt tal." ControlToValidate="TextBox" Display="Dynamic"></asp:CompareValidator>
+            <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Köpesumma måste vara ett positivt tal." ControlToValidate="TextBox" Display="Dynamic" Operator="GreaterThan" ValueToCompare="0"></asp:CompareValidator>
             <p><asp:Button ID="SubmitButton" runat="server" Text="Beräkna Rabbatt" OnClick="SubmitButton_Click" /></p>
         </div>
         <asp:Panel ID="ReciepPanel" runat="server">
