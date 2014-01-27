@@ -20,28 +20,39 @@ namespace Kassakvitto.Model
             }
             set
             {
-                if (value <= 0 )
-                {
-                    _subtotal = value;
-                }
-                else
+                if (value <= 0)
                 {
                     throw new ArgumentException();
                 }
+                _subtotal = value;
             }
         }
 
-        public int Total { get; set; }
+        public double Total { get; set; }
 
         // Konstruktor
-        public Receip(double Subtotal) {
-            Calculate(Subtotal);
+        public Receip(double subtotal) {
+            Calculate(subtotal);
+            
         }
         // Metod
-        public void Calculate( double Subtotal){
+        public void Calculate( double subtotal){
+            Subtotal = subtotal;
             // Här ska värdena från fälten matas in.
-            MoneyOff = 15;
-            Subtotal = 15;
+            if (Subtotal >= 500 && Subtotal <= 999)
+            {
+                DiscountRate = 0.95;
+            }
+            if (Subtotal >= 1000 && Subtotal <= 4999)
+            {
+                DiscountRate = 0.90;
+            }
+            if (Subtotal >= 5000)
+            {
+                 DiscountRate = 0.85;
+            }
+            MoneyOff = (1 - DiscountRate)*Subtotal;
+            Total = Subtotal*DiscountRate;    
     }
     }
 }

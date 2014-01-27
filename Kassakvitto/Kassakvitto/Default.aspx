@@ -10,7 +10,7 @@
     <link href="Content/site.css" rel="stylesheet"/>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" defaultbutton="SubmitButton">
         <h1>Kassakvitto</h1>
         <div>
             <asp:TextBox ID="TextBox" runat="server"></asp:TextBox>
@@ -20,7 +20,7 @@
             <p><asp:Button ID="SubmitButton" runat="server" Text="Beräkna Rabbatt" OnClick="SubmitButton_Click" /></p>
         </div>
         <asp:Panel ID="ReciepPanel" runat="server">
-            <h1>Rabbat Beräkning</h1>           
+            <h1>RabbatBeräkning</h1>           
                 <p><asp:Label ID="PreDiscountLabel" runat="server" Text="Total"></asp:Label></p>
                 <p><asp:Label ID="DiscountLabel" runat="server" Text="Rabattsats"></asp:Label></p>
                 <p><asp:Label ID="DiscountSumLabel" runat="server" Text="Rabatt"></asp:Label></p>        
