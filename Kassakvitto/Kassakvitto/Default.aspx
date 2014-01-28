@@ -12,12 +12,13 @@
 <body>
     <form id="form1" runat="server" defaultbutton="SubmitButton">
         <h1>Kassakvitto</h1>
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
         <div>
             <asp:TextBox ID="TextBox" runat="server"></asp:TextBox>
             
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" CssClass="errorMessage" ErrorMessage="Du måste fylla i korrekt köpesumma" Display="Dynamic" ControlToValidate="TextBox"></asp:RequiredFieldValidator>
-            <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Köpesumma måste vara ett positivt tal." ControlToValidate="TextBox" Display="Dynamic" Operator="GreaterThan" ValueToCompare="0" Type="String"></asp:CompareValidator>
-            <asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Kan ej tolkas som ett tal" Type="Double" ControlToValidate="TextBox" Display="Dynamic" Operator="DataTypeCheck"></asp:CompareValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Text="*" CssClass="errorMessage" ErrorMessage="Du måste fylla i korrekt köpesumma" Display="Dynamic" ControlToValidate="TextBox"></asp:RequiredFieldValidator>
+            <asp:CompareValidator ID="CompareValidator1" runat="server" Text="*" ErrorMessage="Köpesumma måste vara ett positivt tal." ControlToValidate="TextBox" Display="Dynamic" Operator="GreaterThan" ValueToCompare="0" Type="String"></asp:CompareValidator>
+            <asp:CompareValidator ID="CompareValidator2"  runat="server" Text="*" ErrorMessage="Kan ej tolkas som ett tal" Type="Double" ControlToValidate="TextBox" Display="Dynamic" Operator="DataTypeCheck"></asp:CompareValidator>
             <p><asp:Button ID="SubmitButton" runat="server" Text="Beräkna Rabbatt" OnClick="SubmitButton_Click" /></p>
         </div>
         <asp:Panel ID="ReciepPanel" runat="server">
