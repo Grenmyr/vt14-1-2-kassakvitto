@@ -1,8 +1,30 @@
-﻿body { }
-.errorMessage {
-    color:#f00;
+﻿body {
+    width: 800px;
+    border: 2px solid;
+    margin-left: 50px;
+    text-align: center;
+    border-radius: 5px;
 }
 
+.errorMessage {
+    color: #f00;
+    background-color: lightgray;
+}
+
+.labelMessage {
     
+    margin: 5px;
+}
 
+.labelBox {
+    width:400px;
+    border: 1px solid;
+    border-radius: 2px;
+    margin:auto;
+    margin-bottom:20px;
+    box-shadow:5px 5px 5px 5px;
+}
 
+h1 {
+    background-color: lightgray;
+}

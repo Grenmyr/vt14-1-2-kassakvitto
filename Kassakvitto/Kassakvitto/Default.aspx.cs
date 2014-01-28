@@ -17,13 +17,16 @@ namespace Kassakvitto
 
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
-            // Jobbar mot mina validatorer och endast om valid data körs det innanför if satsen.
-            if (IsValid) {               
-                Receip rec = new Receip(double.Parse(TextBox.Text));
-                Total.Text = string.Format("Att betala {0:c}", rec.Total);
-                MoneyOff.Text = string.Format("Rabatt{0:c}", rec.MoneyOff);
-                DiscountRate.Text = string.Format("Rabattsats {0:p0}", rec.DiscountRate);
-                Subtotal.Text = string.Format("Summa {0:c}", rec.Subtotal);
+            // Jobbar mot mina validatorer och endast om valid data körs det innanför if satsen. 
+            if (IsValid) {       
+                // skapar hantag mot mitt affärslager skickar in min indata, och efter det hämtar jag ut data ifrån mina egenskapers fält och presenterar dem.
+                Receip reciep = new Receip(double.Parse(TextBox.Text));
+                Total.Text = string.Format(Total.Text, reciep.Total);
+                MoneyOff.Text = string.Format(MoneyOff.Text, reciep.MoneyOff);
+                DiscountRate.Text = string.Format(DiscountRate.Text, reciep.DiscountRate);
+                Subtotal.Text = string.Format(Subtotal.Text, reciep.Subtotal);
+                // Hanerar min panel som kapslar in alla mina literals med data.
+                ReciepPanel.Visible = true;
             }
         }
     }

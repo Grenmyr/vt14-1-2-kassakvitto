@@ -12,21 +12,24 @@
 <body>
     <form id="form1" runat="server" defaultbutton="SubmitButton">
         <h1>Kassakvitto</h1>
-        <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+        <%-- Presentation av alla meddelanden --%>
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="errorMessage"/>
         <div>
+            <%-- Inmatningsfält --%>
             <asp:TextBox ID="TextBox" runat="server"></asp:TextBox>
-            
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Text="*" CssClass="errorMessage" ErrorMessage="Du måste fylla i korrekt köpesumma" Display="Dynamic" ControlToValidate="TextBox"></asp:RequiredFieldValidator>
-            <asp:CompareValidator ID="CompareValidator1" runat="server" Text="*" ErrorMessage="Köpesumma måste vara ett positivt tal." ControlToValidate="TextBox" Display="Dynamic" Operator="GreaterThan" ValueToCompare="0" Type="String"></asp:CompareValidator>
-            <asp:CompareValidator ID="CompareValidator2"  runat="server" Text="*" ErrorMessage="Kan ej tolkas som ett tal" Type="Double" ControlToValidate="TextBox" Display="Dynamic" Operator="DataTypeCheck"></asp:CompareValidator>
-            <p><asp:Button ID="SubmitButton" runat="server" Text="Beräkna Rabbatt" OnClick="SubmitButton_Click" /></p>
+               <%-- 3 kontroller som skriver felmeddelande till validationSummary --%>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Text="*"  ErrorMessage="Ni kan ej lämna fältet tomt" Display="Dynamic" ControlToValidate="TextBox"></asp:RequiredFieldValidator>
+            <asp:CompareValidator ID="CompareValidator1" runat="server" Text="*"  ErrorMessage="Köpesumma måste vara ett positivt tal." ControlToValidate="TextBox" Display="Dynamic" Operator="GreaterThan" ValueToCompare="0" Type="String"></asp:CompareValidator>
+            <asp:CompareValidator ID="CompareValidator2"  runat="server" Text="*"  ErrorMessage="Kan ej tolkas som ett tal" Type="Double" ControlToValidate="TextBox" Display="Dynamic" Operator="DataTypeCheck"></asp:CompareValidator>
+            <p><asp:Button ID="SubmitButton" runat="server" Text="Beräkna Rabbatt"  OnClick="SubmitButton_Click" /></p>
         </div>
-        <asp:Panel ID="ReciepPanel" runat="server">
-            <h1>RabbatBeräkning</h1>           
-                <p><asp:Label ID="Subtotal" runat="server" Text="Total"></asp:Label></p>
-                <p><asp:Label ID="DiscountRate" runat="server" Text="Rabattsats"></asp:Label></p>
-                <p><asp:Label ID="MoneyOff" runat="server" Text="Rabatt"></asp:Label></p>        
-                <p><asp:Label ID="Total" runat="server" Text="Att betala"></asp:Label></p>
+        <asp:Panel ID="ReciepPanel" runat="server" Visible="false" CssClass="labelBox">
+            <h1>Rabbatberäkning</h1>           
+                <%--<p><asp:Label ID="Subtotal" runat="server" Text="Total" CssClass="labelMessage"></asp:Label></p>--%>
+                <div><asp:Literal ID="Subtotal" runat="server">{0:c}</asp:Literal></div>
+                <div><asp:Literal ID="DiscountRate" runat="server" Text="Rabattsats" >{0:p0}</asp:Literal></div>
+                <div><asp:Literal ID="MoneyOff" runat="server" Text="Rabatt" >{0:c}</asp:Literal></div>     
+                <div><asp:Literal ID="Total" runat="server" Text="Att betala" >{0:c}</asp:Literal></div>
         </asp:Panel>
     </form>
 

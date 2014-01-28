@@ -22,7 +22,7 @@ namespace Kassakvitto.Model
             {
                 if (value <= 0)
                 {
-                    throw new ArgumentException();
+                    throw new ArgumentException("Ett fel har inträffat på affärslagrets Subtotal egenskap");
                 }
                 _subtotal = value;
             }

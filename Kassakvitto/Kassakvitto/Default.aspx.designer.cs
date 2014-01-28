@@ -91,7 +91,7 @@ namespace Kassakvitto {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Subtotal;
+        protected global::System.Web.UI.WebControls.Literal Subtotal;
         
         /// <summary>
         /// DiscountRate control.
@@ -100,7 +100,7 @@ namespace Kassakvitto {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label DiscountRate;
+        protected global::System.Web.UI.WebControls.Literal DiscountRate;
         
         /// <summary>
         /// MoneyOff control.
@@ -109,7 +109,7 @@ namespace Kassakvitto {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MoneyOff;
+        protected global::System.Web.UI.WebControls.Literal MoneyOff;
         
         /// <summary>
         /// Total control.
@@ -118,6 +118,6 @@ namespace Kassakvitto {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Total;
+        protected global::System.Web.UI.WebControls.Literal Total;
     }
 }
