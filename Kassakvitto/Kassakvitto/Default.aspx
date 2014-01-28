@@ -21,10 +21,10 @@
         </div>
         <asp:Panel ID="ReciepPanel" runat="server">
             <h1>RabbatBeräkning</h1>           
-                <p><asp:Label ID="PreDiscountLabel" runat="server" Text="Total"></asp:Label></p>
-                <p><asp:Label ID="DiscountLabel" runat="server" Text="Rabattsats"></asp:Label></p>
-                <p><asp:Label ID="DiscountSumLabel" runat="server" Text="Rabatt"></asp:Label></p>        
-                <p><asp:Label ID="NewSumLabel" runat="server" Text="Att betala"></asp:Label></p>
+                <p><asp:Label ID="Subtotal" runat="server" Text="Total"></asp:Label></p>
+                <p><asp:Label ID="DiscountRate" runat="server" Text="Rabattsats"></asp:Label></p>
+                <p><asp:Label ID="MoneyOff" runat="server" Text="Rabatt"></asp:Label></p>        
+                <p><asp:Label ID="Total" runat="server" Text="Att betala"></asp:Label></p>
         </asp:Panel>
     </form>
 

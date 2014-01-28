@@ -20,8 +20,10 @@ namespace Kassakvitto
             // Jobbar mot mina validatorer och endast om valid data körs det innanför if satsen.
             if (IsValid) {
                 Receip rec = new Receip(double.Parse(TextBox.Text));
-                NewSumLabel.Text = string.Format("Att betala {0:c}", rec.Total);
-                //p0
+                Total.Text = string.Format("Att betala {0:c}", rec.Total);
+                MoneyOff.Text = string.Format("Rabatt{0:c}", rec.MoneyOff);
+                DiscountRate.Text = string.Format("Rabattsats {0:p0}", rec.DiscountRate);
+                Subtotal.Text = string.Format("Summa {0:c}", rec.Subtotal);
             }
         }
     }

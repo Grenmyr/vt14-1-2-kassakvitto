@@ -39,11 +39,14 @@ namespace Kassakvitto.Model
         public void Calculate( double subtotal){
             Subtotal = subtotal;
             // Här ska värdena från fälten matas in.
-            if (Subtotal >= 500 && Subtotal <= 999)
+            if (subtotal < 500) {
+                DiscountRate = 1;
+            }
+            if (Subtotal >= 500 && Subtotal < 1000)
             {
                 DiscountRate = 0.95;
             }
-            if (Subtotal >= 1000 && Subtotal <= 4999)
+            if (Subtotal >= 1000 && Subtotal < 5000)
             {
                 DiscountRate = 0.90;
             }

@@ -67,39 +67,39 @@ namespace Kassakvitto {
         protected global::System.Web.UI.WebControls.Panel ReciepPanel;
         
         /// <summary>
-        /// PreDiscountLabel control.
+        /// Subtotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PreDiscountLabel;
+        protected global::System.Web.UI.WebControls.Label Subtotal;
         
         /// <summary>
-        /// DiscountLabel control.
+        /// DiscountRate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label DiscountLabel;
+        protected global::System.Web.UI.WebControls.Label DiscountRate;
         
         /// <summary>
-        /// DiscountSumLabel control.
+        /// MoneyOff control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label DiscountSumLabel;
+        protected global::System.Web.UI.WebControls.Label MoneyOff;
         
         /// <summary>
-        /// NewSumLabel control.
+        /// Total control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label NewSumLabel;
+        protected global::System.Web.UI.WebControls.Label Total;
     }
 }
