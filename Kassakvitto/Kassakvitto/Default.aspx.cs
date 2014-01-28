@@ -18,7 +18,7 @@ namespace Kassakvitto
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
             // Jobbar mot mina validatorer och endast om valid data körs det innanför if satsen.
-            if (IsValid) {
+            if (IsValid) {               
                 Receip rec = new Receip(double.Parse(TextBox.Text));
                 Total.Text = string.Format("Att betala {0:c}", rec.Total);
                 MoneyOff.Text = string.Format("Rabatt{0:c}", rec.MoneyOff);
