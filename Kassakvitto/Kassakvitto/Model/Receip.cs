@@ -28,7 +28,7 @@ namespace Kassakvitto.Model
             }
         }
 
-        public double Total { get; set; }
+        public double Total { get; private set; }
 
         // Konstruktor
         public Receip(double subtotal) {
@@ -40,22 +40,22 @@ namespace Kassakvitto.Model
             Subtotal = subtotal;
             // Här ska värdena från fälten matas in.
             if (subtotal < 500) {
-                DiscountRate = 1;
+                DiscountRate = 0;
             }
             if (Subtotal >= 500 && Subtotal < 1000)
             {
-                DiscountRate = 0.95;
+                DiscountRate = 0.05;
             }
             if (Subtotal >= 1000 && Subtotal < 5000)
             {
-                DiscountRate = 0.90;
+                DiscountRate = 0.1;
             }
             if (Subtotal >= 5000)
             {
-                 DiscountRate = 0.85;
+                 DiscountRate = 0.15;
             }
-            MoneyOff = (1 - DiscountRate)*Subtotal;
-            Total = Subtotal*DiscountRate;    
+            MoneyOff = DiscountRate * Subtotal;
+            Total = Subtotal - MoneyOff;    
     }
     }
 }

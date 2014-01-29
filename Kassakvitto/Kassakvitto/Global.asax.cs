@@ -14,14 +14,14 @@ namespace Kassakvitto
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            var jQuery = new ScriptResourceDefinition
-            {
-                Path = "~/Scripts/jquery-2.0.3.min.js",
-                DebugPath = "~/Scripts/jquery-2.0.3.min.js",
-                CdnPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-2.0.3.min.js",
-                CdnDebugPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-2.0.3.min.js"
-            };
-            ScriptManager.ScriptResourceMapping.AddDefinition("jquery", jQuery);
+            //var jQuery = new ScriptResourceDefinition
+            //{
+            //    Path = "~/Scripts/jquery-2.0.3.min.js",
+            //    DebugPath = "~/Scripts/jquery-2.0.3.min.js",
+            //    CdnPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-2.0.3.min.js",
+            //    CdnDebugPath = "http://ajax.microsoft.com/ajax/jQuery/jquery-2.0.3.min.js"
+            //};
+            //ScriptManager.ScriptResourceMapping.AddDefinition("jquery", jQuery);
         }
 
         protected void Session_Start(object sender, EventArgs e)
