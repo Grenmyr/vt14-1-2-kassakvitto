@@ -9,16 +9,16 @@ namespace Kassakvitto.Model
     {
         private double _subtotal;
 
-        public double DiscountRate { get; set; }
+        public double DiscountRate { get; private set; }
 
-        public double MoneyOff { get; set; }
+        public double MoneyOff { get; private set; }
 
         public double Subtotal {
             get
             {
                 return _subtotal;
             }
-            set
+             private set
             {
                 if (value <= 0)
                 {
